@@ -1,20 +1,11 @@
 import React from "react";
+import { ImagenesEpp } from "./ImagenesEpp";
 
 
-export function CarouselEpp({id_epp}){
+export function CarouselEpp({id_epp, imagenes}){
     return (
         <div id={"carouselEpp" + id_epp} className="carousel slide">
-            <div className="carousel-inner">
-                <div className="carousel-item active">
-                    <img src="..." className="d-block w-100" alt={"Imagen 1 EPP " + id_epp} />
-                </div>
-                <div className="carousel-item">
-                    <img src="..." className="d-block w-100" alt={"Imagen 2 EPP " + id_epp} />
-                </div>
-                <div className="carousel-item">
-                    <img src="..." className="d-block w-100" alt={"Imagen 3 EPP " + id_epp} />
-                </div>
-            </div>
+            <ImagenesEpp imagenes={imagenes}/>
             <button className="carousel-control-prev" type="button" data-bs-target={"#carouselEpp" + id_epp} data-bs-slide="prev">
                 <span className="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span className="visually-hidden">Previous</span>
