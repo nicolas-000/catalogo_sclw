@@ -1,15 +1,16 @@
 import React from "react";
 
 
-export function ImagenesEpp({imagenes}) {
-    return (
-        <div className="carousel-inner">
-            {imagenes.map((imagen, index) => {
+export const ImagenesEpp = ({ imagenes }) => (
+    <div className = "carousel-inner">
+        {imagenes.map((imagen, index) => {
             const { id_imagen, url_imagen } = imagen;
-            <div className={'carousel-item ' + (index === 0) ? "active" : "" }>
-               <img src={url_imagen} className="d-block w-100" alt={"Imagen " + id_imagen} />
-            </div>
+            return (
+                <div className={(index === 0) ? "carousel-item active": "carousel-item"}>
+                    <img src={url_imagen} className="d-block w-100" alt={"Imagen " + id_imagen}></img>
+
+                </div>
+            )
         })}
-        </div>
-    );
-}
+    </div>
+);
